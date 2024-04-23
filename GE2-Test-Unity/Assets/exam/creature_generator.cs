@@ -13,7 +13,7 @@ public class creature_generator : MonoBehaviour
     public GameObject Segment;
     public GameObject Head;
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Vector3 activePosition = transform.position;
 

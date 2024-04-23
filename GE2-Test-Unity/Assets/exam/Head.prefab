@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca72f3762818ae24991bed08eecca47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paused: 1
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
