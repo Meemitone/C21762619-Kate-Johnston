@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bones: []
-  useChildrenAsBones: 1
+  useChildrenAsBones: 0
   bondDamping: 25
   angularBondDamping: 25
 --- !u!114 &6591754756034546272

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpineAnimator : MonoBehaviour
 {
-    public GameObject[] bones;
+    public List<GameObject> bones;
 
     public bool useChildrenAsBones = false;
 
@@ -19,22 +19,20 @@ public class SpineAnimator : MonoBehaviour
 
         if (useChildrenAsBones)
         {
-            List<GameObject> bonesFetched = new();
             foreach (Transform t in transform)
             {
-                bonesFetched.Add(t.gameObject);
+                bones.Add(t.gameObject);
             }
             while(transform.childCount > 0)
             {
                 transform.GetChild(0).parent = transform.parent;
             }
-            bones = bonesFetched.ToArray();
         }
 
 
         if (bones != null)
         {
-            for (int i = 0; i < bones.Length; i++)
+            for (int i = 0; i < bones.Count; i++)
             {
                 GameObject prevBone = (i == 0)
                         ? this.gameObject
@@ -54,7 +52,7 @@ public class SpineAnimator : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        for (int i = 0; i < bones.Length; i++)
+        for (int i = 0; i < bones.Count; i++)
         {
             GameObject prevBone = (i == 0)
                 ? this.gameObject
