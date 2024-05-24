@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca72f3762818ae24991bed08eecca47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paused: 0
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
@@ -583,6 +584,8 @@ MonoBehaviour:
   multiplier: 0
   Segment: {fileID: 0}
   Head: {fileID: 0}
+  Wings: {fileID: 0}
+  wingIndexes: 
 --- !u!1 &1113860501
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +901,8 @@ MonoBehaviour:
   multiplier: 10
   Segment: {fileID: 2196019168417621073, guid: 5f822516f07e43a4091bdd2a3f9936b3, type: 3}
   Head: {fileID: 2196019168417621073, guid: 77dd4347d76c9544d8a348ed918c0158, type: 3}
+  Wings: {fileID: 2196019168417621073, guid: 574708faeb2b4e54e8b378b5f2251503, type: 3}
+  wingIndexes: 050000000a000000
 --- !u!114 &1417681188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,6 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca72f3762818ae24991bed08eecca47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  paused: 0
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}

@@ -22,6 +22,7 @@ public class creature_generator : MonoBehaviour
         //Take a half step back
         float stepScale = Mathf.Abs(Mathf.Sin(Mathf.Deg2Rad * start_angle + ((0 * frequency) / length) * Mathf.PI));
         float stepLength = Mathf.Lerp(1, multiplier, stepScale);
+        stepLength *= base_size;
         activePosition += transform.rotation * new Vector3(0, 0, stepLength / 2);
 
 
@@ -29,6 +30,7 @@ public class creature_generator : MonoBehaviour
         {
             float scaleT = Mathf.Abs(Mathf.Sin(Mathf.Deg2Rad * start_angle + ((i * frequency) / length) * Mathf.PI));
             float actucalScale = Mathf.Lerp(1, multiplier, scaleT);
+            actucalScale *= base_size;
             activePosition += transform.rotation * new Vector3(0, 0, -actucalScale / 2);//Take a half step forward
             Gizmos.DrawWireCube(activePosition, Vector3.one * actucalScale);//draw the cube centered
             activePosition += transform.rotation * new Vector3(0, 0, -actucalScale / 2);//take another half step forward
@@ -42,6 +44,7 @@ public class creature_generator : MonoBehaviour
         //Take a half step back
         float stepScale = Mathf.Abs(Mathf.Sin(Mathf.Deg2Rad * start_angle + ((0 * frequency) / length) * Mathf.PI));
         float stepLength = Mathf.Lerp(1, multiplier, stepScale);
+        stepLength *= base_size;
         activePosition += transform.rotation * new Vector3(0, 0, stepLength / 2);
 
         GameObject first = null;
@@ -51,6 +54,7 @@ public class creature_generator : MonoBehaviour
         {
             float scaleT = Mathf.Abs(Mathf.Sin(Mathf.Deg2Rad * start_angle + ((i * frequency) / length) * Mathf.PI));
             float actucalScale = Mathf.Lerp(1, multiplier, scaleT);
+            actucalScale *= base_size;
             activePosition += transform.rotation * new Vector3(0, 0, -actucalScale / 2);//Take a half step forward
 
             GameObject newPart = null;
